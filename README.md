@@ -58,7 +58,8 @@ Potential features include:
 ### Q1: Research and Planning
 
 #### October 19–26, 2026 — Understand Sanbor's Customer Base
-
+> [!IMPORTANT] 
+> 📍 **CURRENT WEEK**
 - Identify the types of buyers, industries, and organizations Sanbor currently serves.
 - Gather details to establish a baseline for customer patterns and habits.
 - Analyze purchasing patterns, common customer needs, and communication methods.
