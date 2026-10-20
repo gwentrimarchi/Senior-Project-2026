@@ -1,0 +1,48 @@
+﻿@startuml
+title FootInTheDoor - Target-to-Actionable-Profile Workflow
+skinparam shadowing false
+
+|Sanbor user|
+start
+:Select a company from the existing target list;
+:Provide Sanbor capability context\nand known target information;
+
+|Research process (manual or assisted)|
+:Identify the relevant business unit,\nfacility, location, or program;
+:Gather permitted evidence about company\nneeds, relevant people, and possible entry points;
+:Assess company fit against Sanbor's\nproducts and capabilities;
+:Identify decision-makers and influencers\nacross relevant functions;
+:Document practical entry points and\nverify business contact details where available;
+:Review buying signals and explain\npossible relevance to Sanbor's solutions;
+
+if (Evidence of an explicit supplier search?) then (yes)
+  :Label the finding as a confirmed supplier-search\nopportunity with supporting source and date;
+  note right
+    Confirmation concerns the documented search.
+    Sanbor eligibility, relevance, and whether it is
+    still open must be checked separately.
+  end note
+else (no)
+  if (Evidence of a potential business need?) then (yes)
+    :Label as a potential need;\nexplain inference and uncertainty;
+  else (no)
+    :Record no supported opportunity signal found;
+  endif
+endif
+
+:Attach sources, dates, verification status,\nand information gaps to findings;
+:Recommend priority with rationale,\nan outreach angle, and next steps\nwhere evidence supports them;
+
+|FootInTheDoor platform|
+:Present the integrated company profile\nand expose supporting evidence;
+
+|Sanbor user|
+:Review fit, contacts, entry points,\nopportunity status, and suggested actions;
+if (Enough evidence to pursue?) then (yes)
+  :Choose outreach steps outside the platform;
+else (no)
+  :Defer the target or request further research;
+endif
+:Provide feedback to refine future results;
+stop
+@enduml

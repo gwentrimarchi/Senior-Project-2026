@@ -1,0 +1,26 @@
+﻿@startuml
+title FootInTheDoor - Broad System Context
+left to right direction
+skinparam shadowing false
+
+actor "Sanbor marketing, sales,\nand manufacturer's reps" as Users
+actor "Researcher / data maintainer\n(proposed responsibility)" as Researcher
+actor "EMSDC\nStakeholder feedback and evaluation" as EMSDC
+rectangle "Sanbor inputs\nExisting target list\nProducts and capabilities\nKnown relationships and trigger examples" as Inputs
+rectangle "Permitted research sources\nPublic business information\nAvailable Sanbor / Drexel resources" as Sources
+rectangle "FootInTheDoor\nOne integrated company intelligence tool\n\nWhich companies fit?\nWho matters at the right unit or location?\nHow could Sanbor get in?\nWhy pursue this company now?" as Platform
+rectangle "Actionable company profile\nFit and priority rationale\nRelevant people and roles\nPractical entry points\nOpportunity evidence and next steps\nSources, dates, and uncertainty" as Profile
+
+Users --> Platform : Select targets and\nreview research
+Inputs --> Platform : Supply business context
+Sources --> Researcher : Supply research evidence
+Researcher --> Platform : Maintain sourced findings
+Platform --> Profile : Organize findings
+Profile --> Users : Support prioritization\nand outreach decisions
+EMSDC ..> Platform : Help test and refine concept
+
+note bottom of Platform
+  Sanbor is the initial test partner.
+  Longer-term goal: support other suppliers.
+end note
+@enduml
